@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quai Network Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>QuaiScan API Dashboard</h1>
+                <p>Real-time Network Explorer</p>
+            </div>
+            <button onclick="refreshData()" class="btn-refresh">
+                Refresh Data
+            </button>
+        </header>
+
+        <div class="stats-grid">
+            <div class="card">
+                <h3>Latest Block</h3>
+                <div class="value" id="block-height">Loading...</div>
+                <div class="label">Block Height</div>
+            </div>
+            <div class="card">
+                <h3>Gas Price</h3>
+                <div class="value" id="gas-price">Loading...</div>
+                <div class="label">Standard (Gwei)</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <section class="watchlist-section">
+                <div class="section-header">
+                    <h2>Watched Wallets (Supabase)</h2>
+                </div>
+
+                <div class="add-wallet-form">
+                    <input type="text" id="new-address" placeholder="Enter Quai Address (0x...)" />
+                    <button onclick="addAddress()">Track Wallet</button>
+                </div>
+
+                <div id="wallet-list" class="wallet-list">
+                    <div class="loading-text">Loading watched addresses...</div>
+                </div>
+            </section>
+
+            <section class="tx-section">
+                <h2>Recent Network Transactions</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Block</th>
+                                <th>Hash</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tx-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
