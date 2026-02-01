@@ -1,0 +1,12 @@
+const appId = 'default-app-id'; // You can leave this or change it
+
+        // PASTE YOUR CREDENTIALS HERE
+        const firebaseConfig = {
+            apiKey: "AIzaSyAKdCvVz2qQkgkUcKyA-52h0h60LDe7q_0",
+            authDomain: "innovate-f04c6.firebaseapp.com",
+            projectId: "innovate-f04c6",
+            storageBucket: "innovate-f04c6.firebasestorage.app",
+            messagingSenderId: "695163966457",
+            appId: "1:695163966457:web:54d1fc27a3ed122defa328",
+            measurementId: "G-12C3ZN97F0"
+        };
